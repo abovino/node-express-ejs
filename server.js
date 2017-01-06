@@ -19,7 +19,11 @@ app.use('/', router);
 app.use(express.static(__dirname + '/public'))
 
 // start server (app listen)
-app.listen(port, function(req, res) {
+/*app.listen(port, function(req, res) {
   console.log("app listening on port " + port);
+});*/
+
+app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
+  console.log("Chat server listening at" + port);
 });
 
